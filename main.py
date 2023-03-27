@@ -20,7 +20,7 @@ class CNN:
         # Load the fashion-mnist pre-shuffled train data and test data
         (self.x_train, self.y_train), (self.x_test, self.y_test) = tf.keras.datasets.fashion_mnist.load_data()
         # Define the text labels
-        self.labels = ["T-shirt/top",  # index 0
+        self.labels = ["T-shirt/top",   # index 0
                         "Trouser",      # index 1
                         "Pullover",     # index 2 
                         "Dress",        # index 3 
@@ -105,7 +105,7 @@ class CNN:
         plt.show()
 if __name__ == "__main__":
     network = CNN()
-    # network.train()
+    network.train()
     test_accuracy = network.test()
     # Print test accuracy
     print('\n', 'Test accuracy:', test_accuracy[1])
